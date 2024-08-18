@@ -5,7 +5,7 @@ int main(){
   double n1 ,n2 , r;
   char sym; int option;
    cout<<"choose the type of operation"<<endl;
-   cout<<"aritematics(1)"<<endl;cout<<"factorial(2)"<<endl;cout<<"trignomatric(3)"<<endl;
+   cout<<"aritematics(1)"<<endl;cout<<"factorial(2)"<<endl;cout<<"trignomatric(3)"<<endl;cout<<"square root(4)";
    cin>>option;
 if(option==1){
   cout<<"enter n1, then enter operation +,-,*,/,%,^ ,then enter n2"<<endl;
@@ -46,16 +46,20 @@ cout<<"the result is " <<r;
  }
  if(option==3){
  float x;
- double sin ,cos;
+ double sin ,cos ,tan,cot,sec,cosec;
  
- cout<<"select sin(1) or cos(2)";
+ cout<<"select sin(1) or cos(2) or tan(3) or cot(4) or cosec(5) or sec(6)";
  int a;
  cin>>a;
  cout<<"the angle in radians in {0,1} ";
  cin>>x;
  sin=(x) - ((x*x*x)/(3*2*1)) + ((x*x*x*x*x)/120) - ((x*x*x*x*x*x*x)/(7*720)) + ((x*x*x*x*x*x*x*x*x)/(9*8*7*720)) - (x*x*x*x*x*x*x*x*x*x*x)/(11*10*9*8*7*720) ;
  cos=1 - ((x*x)/(2*1)) + ((x*x*x*x)/24) - ((x*x*x*x*x*x)/(720)) + ((x*x*x*x*x*x*x*x)/(8*7*720)) - (x*x*x*x*x*x*x*x*x*x)/(10*9*8*7*720) ;
- 
+ tan=(sin)/(cos);
+ cot=1/tan; 
+ cosec=1/sin;
+ sec=1/cos;
+
  if(a==1){cout<<"the value of sinx is "<<sin<<endl;
   
  }
@@ -63,8 +67,24 @@ cout<<"the result is " <<r;
  {cout<<"the value of cosx is " <<cos<<endl;
   
  }
+ else if (a==3)
+ {
+  cout<<"the value of tanx is "<<tan<<endl;
  }
-  
+ else if (a==4)
+ {
+  cout<<"the value of cot is "<<cot<<endl;
+ }
+ else if (a==5)
+ {
+  cout<<"the value of cosec is "<<tan<<endl;
+ }
+ else if (a==6)
+ {
+  cout<<"the value of sec is "<<tan<<endl;
+ }
+ 
+ }
+ 
   return 0;
   }
-
